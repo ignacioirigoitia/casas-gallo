@@ -2,7 +2,7 @@ const places = [
     {
         title: "Timbu",
         desc: "Timbú es una cómoda cabaña 🏡 de 45 metros cuadrados ubicada sobre el rio Espera, a unos 500 metros hacia el norte de la boca del Canal 8, en una zona muy tranquila de la Primera Sección de islas del Tigre.",
-        imageUrl: process.env.PUBLIC_URL + "/bg.jpg",
+        imageUrl: process.env.PUBLIC_URL + "/timbu.jpg",
         time: 1500,
     },
     {
@@ -14,7 +14,7 @@ const places = [
     {
         title: "Chana",
         desc: "Chaná es una cómoda cabaña 🏡 de 50 metros cuadrados ubicada sobre el rio Espera, a unos 500 metros hacia el norte de la boca del Canal 8, en una zona muy tranquila de la Primera Sección de islas del delta de Tigre. ",
-        imageUrl: process.env.PUBLIC_URL + "/bg.jpg",
+        imageUrl: process.env.PUBLIC_URL + "/chana.jpg",
         time: 1500,
     },
 ];

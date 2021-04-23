@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     fontSize: "2rem",
     color: "#fff",
+    textAlign: "center",
   },
   description: {
     fontFamily: "Nunito",
@@ -30,7 +31,16 @@ const useStyles = makeStyles({
   buttons: {
     fontFamily: "Nunito",
     marginTop: "10px",
-  }, 
+    fontWeight: "bold",
+    backgroundColor: "#fff",
+    width: "35%"
+  },
+  cards: {
+    display : "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+  }
 });
 
 export default function ImageCard({ place, checked }) {
@@ -44,7 +54,7 @@ export default function ImageCard({ place, checked }) {
                 image={place.imageUrl}
                 title="Contemplative Reptile"
             />
-            <CardContent>
+            <CardContent className={classes.cards}>
                 <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
                     {place.title}
                 </Typography>

@@ -89,6 +89,7 @@ function Header () {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
                     >   
+                        <MenuItem className={classes.menu} onClick={handleClose}>Inicio</MenuItem>
                         <MenuItem className={classes.menu} onClick={handleClose}>Puerto Gallo</MenuItem>
                         <MenuItem className={classes.menu} onClick={handleClose}>Chana</MenuItem>
                         <MenuItem className={classes.menu} onClick={handleClose}>Timbu</MenuItem>
