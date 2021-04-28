@@ -3,7 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Header from "./components/Header";
 import PlaceToVisit from "./components/PlaceToVisit";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import PuertoGallo from "./components/PuertoGallo";
+import Chana from "./components/Chana";
+import Timbu from "./components/Timbu";
+import Contactanos from "./components/Contactanos";
+import "./App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +28,17 @@ function App() {
       <div className={classes.root}>
       <CssBaseline /> {/* nos permite sacar las lineas blancas por defecto del margen */}
       <Header />
-      <PlaceToVisit />
+      <Switch>
+        <Route path="/" exact component={PlaceToVisit}/>
+
+        <Route path="/puerto-gallo" component={PuertoGallo} />
+
+        <Route path="/timbu" component={Timbu} />
+
+        <Route path="/chana" component={Chana} />
+
+        <Route path="/contact" component={Contactanos} />
+      </Switch>
     </div>
     </Router>
   );

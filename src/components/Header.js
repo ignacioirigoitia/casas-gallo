@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     appbar: {
@@ -89,11 +90,11 @@ function Header () {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
                     >   
-                        <MenuItem className={classes.menu} onClick={handleClose}>Inicio</MenuItem>
-                        <MenuItem className={classes.menu} onClick={handleClose}>Puerto Gallo</MenuItem>
-                        <MenuItem className={classes.menu} onClick={handleClose}>Chana</MenuItem>
-                        <MenuItem className={classes.menu} onClick={handleClose}>Timbu</MenuItem>
-                        <MenuItem className={classes.menu} onClick={handleClose}>Contactanos</MenuItem>
+                        <Link to="/"><MenuItem className={classes.menu} onClick={handleClose}>Inicio</MenuItem></Link>
+                        <Link to="/puerto-gallo"><MenuItem className={classes.menu} onClick={handleClose}>Puerto Gallo</MenuItem></Link> 
+                        <Link to="/chana"><MenuItem className={classes.menu} onClick={handleClose}>Chana</MenuItem></Link>
+                        <Link to="/timbu"><MenuItem className={classes.menu} onClick={handleClose}>Timbu</MenuItem></Link>
+                        <Link to="/contact"><MenuItem className={classes.menu} onClick={handleClose}>Contactanos</MenuItem></Link>
                     </Menu>
                 </Toolbar>
             </AppBar>

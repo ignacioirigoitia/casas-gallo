@@ -6,6 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Collapse } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles({
     marginTop: "10px",
     fontWeight: "bold",
     backgroundColor: "#fff",
-    width: "35%"
+    width: "100%"
   },
   cards: {
     display : "flex",
@@ -61,9 +62,11 @@ export default function ImageCard({ place, checked }) {
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.description}>
                     {place.desc}
                 </Typography>
-                <Button className={classes.buttons} variant="contained">
+                <Link to={place.url}>
+                  <Button className={classes.buttons} variant="contained">
                     ¡Conoce más!
-                </Button>
+                  </Button>
+                </Link>
             </CardContent>
             
         </Card>
